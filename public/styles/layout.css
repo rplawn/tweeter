@@ -9,13 +9,6 @@ html {
 }
 *, *:before, *:after {
   box-sizing: inherit;
-  
-}
-
-.nav {
-  background-color: rgb(125, 125, 204);
-  font-family: "Bungee", sans-serif;
-  font-style: normal;
 }
 
 /*

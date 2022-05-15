@@ -1,0 +1,31 @@
+.nav {
+  background-color: #4056A1;
+  font-family: "Bungee", sans-serif;
+  font-style: normal;
+  color: #FFFFFF 
+  
+}
+
+nav.nav {
+  height: 80px;
+  display:flex;
+}
+
+span {
+  /* display: flex; */
+  /* justify-content: flex-end; */
+  /* position: relative; */
+  padding-left: 1.5em;
+  padding-right: 1.5em;
+  padding-bottom: .5em;
+  align-self: flex-end;
+}
+
+nav.newTweet {
+  font-size: small;
+  padding-right: 1.5em;
+  padding-left: 90em;
+  /* position:relative */
+  /* float: right */
+  align-self: center;
+}
