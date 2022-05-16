@@ -1,4 +1,6 @@
 header {
+  padding-top: 12em;
+  padding-bottom: 7em;
   height: 400px;
   display: flex;
   flex-direction: column;
@@ -7,3 +9,5 @@ header {
   background-color: #cc8800;
   background-image: url("https://www.transparenttextures.com/patterns/arabesque.png");
 }
+
+
