@@ -1,9 +1,12 @@
 nav {
+  position: fixed;
+  top: 0;
+  width: 100%;
   background-color: #4056A1;
   font-family: "Bungee", sans-serif;
   font-style: normal;
   color: #FFFFFF; 
-  height: 80px;
+  height: 65px;
   display:flex;
   justify-content: space-between;
   z-index: 10;
@@ -17,19 +20,8 @@ nav {
 }
 
 span {
-  /* display: flex; */
-  /* justify-content: flex-end; */
-  /* position: relative; */
   padding-left: 1.5em;
   padding-right: 1.5em;
   padding-bottom: .5em;
   align-self: flex-end;
 }
-
-/* nav.newTweet {
-  font-size: small;
-  /* padding-right: 1.5em; */
-  /* padding-left: 90em; */
-  /* position:relative */
-  /* align-self: center;
-} */ 

@@ -1,0 +1,31 @@
+.new-tweet {
+  display: flex;
+  justify-content: center;
+}
+
+form {
+  text-align: center;
+}
+
+
+textarea {
+  width: 100%
+  padding: 12px 20px;
+  margin: 8px 0;
+  /* box-sizing: border-box; */
+  border-bottom: 5px solid grey;
+}
+
+.counter {
+  float: right;
+  font-family: "Bungee", sans-serif;
+  font-style: normal;
+}
+
+button {
+  float: left;
+  font-family: "Bungee", sans-serif;
+  color: rgb(255, 255, 255);
+  background-color: #4056A1;
+}
+
