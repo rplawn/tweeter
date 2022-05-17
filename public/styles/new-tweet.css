@@ -12,7 +12,6 @@ textarea {
   width: 100%
   padding: 12px 20px;
   margin: 8px 0;
-  /* box-sizing: border-box; */
   border-bottom: 5px solid grey;
 }
 
@@ -20,6 +19,10 @@ textarea {
   float: right;
   font-family: "Bungee", sans-serif;
   font-style: normal;
+}
+
+.counter-warning {
+  color: red;
 }
 
 button {
