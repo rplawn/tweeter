@@ -15,8 +15,20 @@ $(document).ready(function() {
   })
 });
 
-//Shorthand line 6-9:
+//--------Shorthand line 6-9-------//
 // counter.text(140 - event.target.value.length)
-// line 10-14
+// -------line 10-14 -------//
 // counter.toggleClass("counter-warning", remaining < 0)
-// debugger to debug
+// -------To debug in chrome -------//
+//  add debugger to code line
+
+
+//Practice remove before project submission
+// $(document).ready(function() {
+//   const counter = $(".counter")
+//   $("#tweet-text").on("keyup", function(event) {
+//     // console.log("keyup")
+//     const characters = $(this).val().length
+//     console.log(characters);
+//   })
+// });
