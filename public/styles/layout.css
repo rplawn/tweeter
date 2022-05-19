@@ -39,7 +39,7 @@ hr {
   width: 97%;
 }
 
-.allTweets {
+.postedTweets {
   border: 2.5px solid #545149;
   width: 811px;
   font-style: normal;
@@ -47,6 +47,7 @@ hr {
   padding-bottom: .5em;
   padding-left: .5em;
   padding-right: .5em;
+  margin-bottom: 2em;
 }
 
 header.tweetHeader {
