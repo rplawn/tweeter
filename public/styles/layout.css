@@ -34,3 +34,35 @@ body {
   justify-content: center;
 }
 
+hr {
+  border: 2.5px solid #545149;
+  width: 97%;
+}
+
+.allTweets {
+  border: 2.5px solid #545149;
+  width: 811px;
+  font-style: normal;
+  padding-top: .5em;
+  padding-bottom: .5em;
+  padding-left: .5em;
+  padding-right: .5em;
+}
+
+header.tweetHeader {
+  height: 75px;
+  display: flex;
+  justify-content: space-between;
+}
+
+div.tweetContent {
+  padding-left: 1em;
+  padding-bottom: 1em;;
+  font-weight: 600;
+}
+
+footer.tweetFooter {
+  font-size: small;
+  display: flex;
+  justify-content: space-between;
+}

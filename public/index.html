@@ -63,19 +63,33 @@
         <!-- <h2>Compose Tweet</h2> -->
         <form action="/tweets/" method="POST">
           <!-- <label for="tweet-text">What are you humming about?</label> -->
-          <textarea name="text" id="tweet-text" placeholder="What are you humming about?" style="width: 717px; height:65px;"></textarea>
+          <textarea name="text" id="tweet-text" placeholder="What are you humming about?" style="width: 811px; height: 100px;"></textarea>
           <div>
             <button type="submit">Tweet</button>
             <output name="counter" class="counter" for="tweet-text">140</output>
           </div>
         </form>
       </section>
+      <br>
+      <br>
       <article class="allTweets">
-        <header>
-          fake header text
+        <header class="tweetHeader">
+          <div>
+            <i class="fa-solid fa-person"></i> Newton
+          </div>
+            @handle
         </header>
-        <footer>
-          fake footer text 
+        <div class="tweetContent">
+          If I have seen further it is by standing on the shoulders of giants
+        </div>
+        <hr>
+        <footer class="tweetFooter">
+            10 days ago
+            <div>
+              <i class="fa-solid fa-flag"></i>
+              <i class="fa-solid fa-retweet"></i>
+              <i class="fa-solid fa-heart"></i>
+            </div>
         </footer>
       </article>
   </main>
