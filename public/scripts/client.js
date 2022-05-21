@@ -72,13 +72,25 @@ return tweetElement;
 
 renderTweets(data);
 
-// add event listener for submit -->
+// event listener for submit in tweet form-->
  $( "#tweetForm" ).on( "submit", function(event) {
    event.preventDefault();
 
    const serializedContent =  $(this).serialize();
   //  console.log("this is what i need" , serializedContent);
+  // AJAX post request for submission data
 
+  $.ajax({
+    type: "POST",
+    url: "http://localhost:8080/tweets/",
+    data: serializedContent,
+    success: function(data) {
+      console.log("this is a success", data)
+    }, 
+    error: function(err) {
+      console.log("Error!", err)
+    }
+  });
 
   });
 
