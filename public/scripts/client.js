@@ -4,10 +4,8 @@
  * Reminder: Use (and do all your DOM work in) jQuery's document ready function
  */
 
-// const $tweet = $(`<article class="tweet">Hello world</article>`);
+
 $(document).ready(function(){
-
-
 
 const data = [
   {
@@ -35,10 +33,8 @@ const data = [
 ]
 
 const renderTweets = function(tweets) {
-// loops through tweets
-// let tweetsContainer = $('.tweets').html("")
-
-for (let tweet of tweets) {
+  // loops through tweets
+  for (let tweet of tweets) {
   // calls createTweetElement for each tweet
    const tweetElement = createTweetElement(tweet)
    // takes return value and appends it to the tweets container
@@ -74,13 +70,17 @@ let tweetElement = $tweet.append(html)
 return tweetElement;
 }
 
-// const $tweet = createTweetElement(tweetData);
-
-// Test / driver code (temporary)
-// console.log($tweet); // to see what it looks like
-// $('#tweets-container').append($tweet);
-
 renderTweets(data);
-// console.log(renderTweets)
+
+// add event listener for submit -->
+ $( "#tweetForm" ).on( "submit", function(event) {
+   event.preventDefault();
+
+   const serializedContent =  $(this).serialize();
+  //  console.log("this is what i need" , serializedContent);
+
+
+  });
 
 })
+
