@@ -5,7 +5,7 @@ Tweeter is a simple, single-page AJAX-based Twitter clone that uses jQuery, HTML
 _This project was created as part of my bootcamp training at Lighthouse Labs_
 
 ## Screenshots
-Welcone Layout
+Welcome Layout
 ![Screenshot of Welcome Layout](https://github.com/rplawn/tweeter/blob/988e80458f5b1cc550db96c8ded798b52fed591f/docs/Welcome%20.png)
 
 Tweet box
