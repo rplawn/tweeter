@@ -39,7 +39,7 @@ hr {
   width: 97%;
 }
 
-.postedTweets {
+.tweet {
   border: 2.5px solid #545149;
   width: 811px;
   font-style: normal;
@@ -54,6 +54,12 @@ header.tweetHeader {
   height: 75px;
   display: flex;
   justify-content: space-between;
+  align-items: center;
+}
+
+header.tweetHeader div {
+  display: flex;
+  align-items: center;
 }
 
 div.tweetContent {
