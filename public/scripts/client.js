@@ -6,7 +6,7 @@
 
 $(document).ready(function () {
 
-//Prevent XSS attack
+  //Prevent XSS attack
   const escape = function (str) {
     let div = document.createElement("div");
     div.appendChild(document.createTextNode(str));
@@ -71,28 +71,29 @@ $(document).ready(function () {
 
     // form validation check
     if (textLength === 0) {
-      return alert("Please enter some text");
+      $(".Error").text("Please enter some text");
+      $(".Error").slideDown("slow").delay(2000).slideUp("slow")
+
+    } else if (textLength > 140) {
+      $(".Error").text("Tweet must be less than 140 characters");
+      $(".Error").slideDown("slow").delay(2000).slideUp("slow")
+
+    } else {
+      // AJAX post request for submission data
+      $.ajax({
+        type: "POST",
+        url: "http://localhost:8080/tweets/",
+        data: serializedContent,
+        success: function (data) {
+          console.log("Post request a success", data);
+          //refetching tweets on form submission
+          loadTweets();
+        },
+        error: function (err) {
+          console.log("Error!", err);
+        }
+      });
     }
-
-    if (textLength > 140) {
-      return alert("Tweet must be less than 140 characters");
-    }
-
-    // AJAX post request for submission data
-    $.ajax({
-      type: "POST",
-      url: "http://localhost:8080/tweets/",
-      data: serializedContent,
-      success: function (data) {
-        console.log("Post request a success", data);
-        //refetching tweets on form submission
-        loadTweets();
-      },
-      error: function (err) {
-        console.log("Error!", err);
-      }
-    });
-
   });
 
 

@@ -1,5 +1,6 @@
 .new-tweet {
   display: flex;
+  flex-direction: column;
   justify-content: center;
 }
 
@@ -30,5 +31,15 @@ button {
   font-family: "Bungee", sans-serif;
   color: rgb(255, 255, 255);
   background-color: #4056A1;
+}
+
+.Error {
+  display: none;
+  border: 2.5px solid #c51244;
+  padding: 10px;
+  border-radius: 0;
+  position: relative; 
+  box-shadow: 1px 1px 1px #aaaaaa;
+  margin-top: 10px;
 }
 
