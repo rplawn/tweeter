@@ -19,6 +19,11 @@ body {
   font-style: italic;
 }
 
+.name {
+  margin-block-start: 0.5em;
+  margin-block-end: 0.5em;
+}
+
 .container {
   width: 90%;
   background-color: #f4f1ec;
