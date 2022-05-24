@@ -4,36 +4,14 @@
  * Reminder: Use (and do all your DOM work in) jQuery's document ready function
  */
 
-
-
 $(document).ready(function () {
 
-  // const data = [
-  //   {
-  //     "user": {
-  //       "name": "Newton",
-  //       "avatars": "https://i.imgur.com/73hZDYK.png"
-  //       ,
-  //       "handle": "@SirIsaac"
-  //     },
-  //     "content": {
-  //       "text": "If I have seen further it is by standing on the shoulders of giants"
-  //     },
-  //     "created_at": 1461116232227
-  //   },
-  //   {
-  //     "user": {
-  //       "name": "Descartes",
-  //       "avatars": "https://i.imgur.com/nlhLi3I.png",
-  //       "handle": "@rd" },
-  //     "content": {
-  //       "text": "Je pense , donc je suis"
-  //     },
-  //     "created_at": 1461113959088
-  //   }
-  // ]
-
-
+//Prevent XSS attack
+  const escape = function (str) {
+    let div = document.createElement("div");
+    div.appendChild(document.createTextNode(str));
+    return div.innerHTML;
+  };
 
   const createTweetElement = function (tweet) {
     let tweetElement = `
@@ -45,7 +23,7 @@ $(document).ready(function () {
           </div>
           <p> ${tweet.user.handle} </p>
         </header>
-        <div class="tweetContent"> ${tweet.content.text} </div>
+        <div class="tweetContent"> ${escape(tweet.content.text)} </div>
         <hr>
         <footer class="tweetFooter">
             <span> ${timeago.format(tweet.created_at)} </span>
@@ -61,17 +39,14 @@ $(document).ready(function () {
   }
 
   const renderTweets = function (tweets) {
-    // loops through tweets
     for (let tweet of tweets) {
-      // calls createTweetElement for each tweet
       const tweetElement = createTweetElement(tweet)
-      // takes return value and appends it to the tweets container
       $('.tweets').prepend(tweetElement)
     }
   }
 
-   // AJAX GET request
-   const loadTweets = function () {
+  // AJAX GET request
+  const loadTweets = function () {
     $.ajax({
       type: "GET",
       url: "http://localhost:8080/tweets/",
@@ -94,7 +69,7 @@ $(document).ready(function () {
     const textLength = $("#tweet-text").val().length
     const serializedContent = $(this).serialize();
 
-    //if checks
+    // form validation check
     if (textLength === 0) {
       return alert("Please enter some text");
     }
@@ -120,8 +95,8 @@ $(document).ready(function () {
 
   });
 
- 
-//Loading tweets on page
+
+  //Loading tweets on page
   loadTweets();
 
 })
