@@ -1,6 +1,4 @@
 .mainHeader {
-  padding-top: 12em;
-  padding-bottom: 7em;
   height: 400px;
   display: flex;
   flex-direction: column;
@@ -8,6 +6,9 @@
   align-items: center;
   background-color: #cc8800;
   background-image: url("https://www.transparenttextures.com/patterns/arabesque.png");
+  padding: 100px;
+  margin-top: 150px;
+  margin-left: 50px;
 }
 
 

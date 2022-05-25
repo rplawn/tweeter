@@ -49,31 +49,31 @@
         <i class="fa-solid fa-angles-down"></i> 
       </div>
     </nav>
-
-    <header class="mainHeader">
-      <div>
+    <div class="mainPage">
+      <header class="mainHeader">
+        <div>
           <img src="/images/profile-hex.png"> 
-      </div>
-      <div>
-          <h2 class="name">Welcome, Olivia</h2>
-      </div>
-  </header>
+        </div>
+        <div>
+            <h2 class="name">Welcome, Olivia</h2>
+        </div>
+      </header>
     <!-- Page-specific (main) content here -->
-    <div class="containerParent">
-    <main class="container">
-      <section class="new-tweet">
-        <div class="Error"></div>
-        <!-- <h2>Compose Tweet</h2> -->
-        <form id="tweetForm" action="/tweets/" method="POST">
-          <textarea name="text" id="tweet-text" placeholder="What are you humming about?" style="width: 811px; height: 100px;"></textarea>
-          <div>
-            <button type="submit">Tweet</button>
-            <output name="counter" class="counter" for="tweet-text">140</output>
-          </div>
-        </form>
-      </section>
-      <section class="tweets"></section>
-  </main>
-</div>
+<!-- <div class="containerParent"> -->
+      <main class="container">
+        <section class="new-tweet">
+            <div class="Error"></div>
+            <form id="tweetForm" action="/tweets/" method="POST">
+              <textarea row="1" name="text" id="tweet-text" placeholder="What are you humming about?" style="width: 811px;"></textarea>
+              <div>
+                <button type="submit">Tweet</button>
+                <output name="counter" class="counter" for="tweet-text">140</output>
+              </div>
+            </form>
+          </section>
+        <section class="tweets"></section>
+      </main>
+<!-- </div> -->
+    </div>
   </body>
 </html>

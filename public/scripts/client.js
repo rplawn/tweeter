@@ -16,27 +16,27 @@ $(document).ready(function () {
   const createTweetElement = function (tweet) {
     let tweetElement = `
 <article class="tweet">
-        <header class="tweetHeader">
-          <div> 
-             <img src="${tweet.user.avatars}" alt="User Avatar" />
-             <p>${tweet.user.name}</p>
-          </div>
-          <p> ${tweet.user.handle} </p>
-        </header>
-        <div class="tweetContent"> ${escape(tweet.content.text)} </div>
-        <hr>
+  <header class="tweetHeader">
+    <div> 
+      <img src="${tweet.user.avatars}" alt="User Avatar" />
+        <p>${tweet.user.name}</p>
+    </div>
+        <p> ${tweet.user.handle} </p>
+  </header>
+    <div class="tweetContent"> ${escape(tweet.content.text)} </div>
+      <hr>
         <footer class="tweetFooter">
-            <span> ${timeago.format(tweet.created_at)} </span>
-            <div>
-              <i class="fa-solid fa-flag"></i>
-              <i class="fa-solid fa-retweet"></i>
-              <i class="fa-solid fa-heart"></i>
-            </div>
+          <span> ${timeago.format(tweet.created_at)} </span>
+    <div>
+      <i class="fa-solid fa-flag"></i>
+      <i class="fa-solid fa-retweet"></i>
+      <i class="fa-solid fa-heart"></i>
+    </div>
         </footer>
-      </article>
+</article>
 `
-    return tweetElement;
-  }
+  return tweetElement;
+}
 
   const renderTweets = function (tweets) {
     for (let tweet of tweets) {
@@ -61,15 +61,15 @@ $(document).ready(function () {
     });
   }
 
-  // event listener for submit in tweet form-->
+  // Event listener for submit in tweet form-->
   $("#tweetForm").on("submit", function (event) {
     event.preventDefault();
 
-    // define variables
+    // Define variables
     const textLength = $("#tweet-text").val().length
     const serializedContent = $(this).serialize();
 
-    // form validation check
+    // Form validation check
     if (textLength === 0) {
       $(".Error").text("Please enter some text");
       $(".Error").slideDown("slow").delay(2000).slideUp("slow")
@@ -95,7 +95,6 @@ $(document).ready(function () {
       });
     }
   });
-
 
   //Loading tweets on page
   loadTweets();

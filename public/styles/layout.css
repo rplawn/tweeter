@@ -82,3 +82,8 @@ footer.tweetFooter {
 i:hover {
   color:aqua
 }
+
+.mainPage {
+  display: flex;
+  flex-direction: row;
+}
