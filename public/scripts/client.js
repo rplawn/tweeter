@@ -4,6 +4,7 @@
  * Reminder: Use (and do all your DOM work in) jQuery's document ready function
  */
 
+
 $(document).ready(function () {
 
   //Prevent XSS attack
@@ -86,6 +87,8 @@ $(document).ready(function () {
         data: serializedContent,
         success: function (data) {
           console.log("Post request a success", data);
+          //clear form on successful submission
+          $("#tweet-text").val("");
           //refetching tweets on form submission
           loadTweets();
         },
