@@ -6,9 +6,20 @@
   align-items: center;
   background-color: #cc8800;
   background-image: url("https://www.transparenttextures.com/patterns/arabesque.png");
-  padding: 100px;
-  margin-top: 150px;
-  margin-left: 50px;
+}
+
+@media screen and (min-width: 1024px) {
+
+  .mainHeader {
+     padding: 3em;
+     margin-top: 5em; 
+     margin-left: 2em;
+     flex-basis: 25%;
+  }
+
+  .avatar {
+    max-width: 100%;
+  }
 }
 
 
